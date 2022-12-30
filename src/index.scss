@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;700&display=swap");
+
+$bgColor: #111;
+$txtColor: #fff;
+$boxBgColor: #fff;
+$btnHover: #aaa;
+$btnActive: #777;
+$btnDisable: #ccc;
+$font: "Noto Sans TC", Arial, Helvetica, sans-serif;
+
+::-webkit-scrollbar {
+    background-color: $bgColor;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $txtColor;
+
+    &:hover {
+        background-color: $btnDisable;
+    }
+}
+
+body {
+    background-color: $bgColor;
+    color: $txtColor;
+    font-family: $font;
+    margin: 0;
+}
+
+h1 {
+    font-weight: normal;
+    margin: 0;
+}
+
+input {
+    background-color: $boxBgColor;
+    border: none;
+    padding: 10px;
+    font-size: medium;
+    outline: none;
+
+    &[type="button"] {
+        cursor: pointer;
+        &:hover {
+            background-color: $btnHover;
+        }
+        &:active {
+            background-color: $btnActive;
+        }
+        &:disabled {
+            background-color: $btnDisable;
+        }
+    }
+}
+
+#sticky {
+    background-color: $bgColor;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+}
